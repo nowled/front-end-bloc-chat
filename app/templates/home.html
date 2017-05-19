@@ -1,14 +1,14 @@
 <h1>Bloc Chat</h1>
 <h2>Global Travelers</h2>
+<div>
+<input type="text" name="name" value="{{room.addRoom}}">
+<button type="button"  ng-click="room.addRoom">Add Room</button>
+<h1>{{room.addRoom.name}}</h1>
+</div>
 <div ng-repeat="room in home.rooms">
     <ul>
         <li>
             <h3>{{room.name}}</h3></li>
              </ul>
-             <div>
-            <input type="text" name="name" value="{{room.addRoom}}">
 
-             <button type="button" class="new-room" ng-click="room.addRoom">New Room</button>
-           <h1>{{room.addRoom}}</h1>
-    </div>
 </div>
