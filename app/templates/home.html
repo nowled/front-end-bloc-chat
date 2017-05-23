@@ -1,9 +1,9 @@
 <h1>Bloc Chat</h1>
 <h2>Global Travelers</h2>
 <div>
-<input type="text" name="name" value="{{room.addRoom}}">
-<button type="button"  ng-click="room.addRoom">Add Room</button>
-<h1>{{room.addRoom.name}}</h1>
+<input type="text" name="name" ng-model="home.roomName" value="">
+<button type="button"  ng-click="home.addRoom()">Add Room</button>
+
 </div>
 <div ng-repeat="room in home.rooms">
     <ul>

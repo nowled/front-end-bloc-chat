@@ -8,10 +8,7 @@
 
         Room.add = function(room) {
             //Use the firebase method $add here
-            Room.$add({value: 'rooms'}).then(function(room) {
-            var id = room.key;
-            Room.$indexFor(id);
-        });
+          rooms.$add(room);
       }
         return Room;
     }

@@ -2,7 +2,13 @@
     function HomeCtrl(Room) {
 
         this.rooms = Room.all;
-        this.addRoom = Room.add;
+
+        this.addRoom = function(){
+          var newRoomName = this.roomName;
+          Room.add({ name: newRoomName });
+
+         this.roomName = '';
+       }
     }
 
     angular
