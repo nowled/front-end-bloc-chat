@@ -1,9 +1,9 @@
 (function() {
     function HomeCtrl(Room, $uibModal) {
 
-           this.rooms = Room.all;
+        this.rooms = Room.all;
 
-           this.addRoom = function() {
+        this.addRoom = function() {
             var newRoomName = this.roomName;
 
             Room.add({
@@ -12,14 +12,16 @@
             this.roomName = '';
         }
 
-        this.openModal = function() {
+        this.openModal = function(size) {
             var modalInstance = $uibModal.open({
                 templateUrl: '/templates/modal.html',
-                controller: 'ModalCtrl as modal'      
+                controller: 'ModalCtrl as modal',
+                size: size
             });
 
         };
-}
+
+    }
 
 
     angular

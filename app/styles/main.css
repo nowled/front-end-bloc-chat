@@ -1,23 +1,117 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    /**  padding-left: 10px; */
+    box-sizing: border-box;
+}
+
+.top {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 92px;
+    background-color: #DEDEDE;
+    border-bottom: solid #d3d3d3 7px;
+    text-align: center;
+}
+
+.left {
+    position: absolute;
+    left: 0;
+    top: 92px;
+    bottom: 0;
+    width: 400px;
+    background-color: #DEDEDE;
+    border-right: solid #d3d3d3 7px;
+    padding-top: 7px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.main {
+    position: absolute;
+    left: 178px;
+    top: 92px;
+    right: 0;
+    bottom: 0;
+}
+
+span {
+    font-size: 4rem;
+    padding-right: 2rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 5.2rem;
+    font-weight: bolder;
+}
+
+ul li {
+    text-decoration: none;
+}
+
 .modal {
-  text-align: center;
-  padding: 0!important;
+    text-align: center;
+}
+
+.modal-form {
+    background: #D8D8D8;
+    text-align: center;
 }
 
 .modal:before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-  margin-right: -4px;
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: 4px;
 }
 
 .modal-content {
-  padding-left: 7px;
-  padding-bottom: 7px;
+    padding-left: 8px;
+    padding-bottom: 8px;
+    background: #D8D8D8;
 }
 
 .modal-dialog {
-  display: inline-block;
-  text-align: left;
-  vertical-align: middle;
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    background: #D8D8D8;
+}
+
+.modal-input-box {
+    padding-bottom: 8px;
+}
+
+.btn-bloc-color {
+    color: #261B1B;
+    background-color: #A39D9D;
+    border-color: #AEAEB0;
+}
+
+.btn-bloc-color:hover, .btn-bloc-color:focus, .btn-bloc-color:active, .btn-bloc-color.active, .open .dropdown-toggle.btn-bloc-color {
+    color: #261B1B;
+    background-color: #837E8A;
+    border-color: #AEAEB0;
+}
+
+.btn-bloc-color:active, .btn-bloc-color.active, .open .dropdown-toggle.btn-bloc-color {
+    background-image: none;
+    background-color: pink;
+}
+
+.btn-bloc-color.disabled, .btn-bloc-color[disabled], fieldset[disabled] .btn-bloc-color, .btn-bloc-color.disabled:hover, .btn-bloc-color[disabled]:hover, fieldset[disabled] .btn-bloc-color:hover, .btn-bloc-color.disabled:focus, .btn-bloc-color[disabled]:focus, fieldset[disabled] .btn-bloc-color:focus, .btn-bloc-color.disabled:active, .btn-bloc-color[disabled]:active, fieldset[disabled] .btn-bloc-color:active, .btn-bloc-color.disabled.active, .btn-bloc-color[disabled].active, fieldset[disabled] .btn-bloc-color.active {
+    background-color: #A39D9D;
+    border-color: #AEAEB0;
+}
+
+.btn-bloc-color .badge {
+    color: #A39D9D;
+    background-color: #261B1B;
 }

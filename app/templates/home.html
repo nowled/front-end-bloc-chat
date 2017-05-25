@@ -1,14 +1,18 @@
-
-<h2>Global Travelers</h2>
-<div>
-
- <h1>Bloc Chat</h1><button type="button"  ng-click="home.openModal()">New  Room</button>
+<div class="top">
+    <h2>Digital Nomads</h2>
 </div>
+<div class="left container">
+    <div>
 
-<div ng-repeat="room in home.rooms">
-    <ul>
-        <li>
-            <h3>{{room.name}}</h3></li>
-             </ul>
+        <p><span>Bloc Chat</span><button type="button" class="btn btn-bloc-color btn-lg" ng-click="home.openModal('sm')">New  Room</button>
+        </p>
+    </div>
 
+    <div ng-repeat="room in home.rooms">
+        <ul>
+            <li>
+                <h3>{{room.name}}</h3></li>
+        </ul>
+
+    </div>
 </div>

@@ -1,14 +1,14 @@
-<div class="modal-form">
-  <div class="modal-title">
-  <h3>Create New Room</h3>
-  </div>
+<div class="modal-form containter" ng-controller="HomeCtrl as home">
+    <div class="modal-title">
+        <h3>Create New Room</h3>
+    </div>
 
-  <div class="modal-input-box">
-  <input type="text" name="input" ng-model="home.roomName" name="text" placeholder="Enter room name">
-  </div>
+    <div class="modal-input-box">
+        <input type="text" name="input" ng-model="home.roomName" name="text" placeholder="Enter room name">
+    </div>
 
-  <div class="modal-buttons">
-  <button class="btn btn-primary" type="button" ng-click="home.addRoom()">Create Room</button>
-  <button class="btn btn-warning" type="button" ng-click="home.close()">Cancel</button>
-</div>
+    <div class="modal-buttons">
+        <button class="btn btn-bloc-color" type="button" ng-click="home.addRoom()">Create Room</button>
+        <button class="btn btn-bloc-color" type="button" ng-click="modal.close()">Cancel</button>
+    </div>
 </div>

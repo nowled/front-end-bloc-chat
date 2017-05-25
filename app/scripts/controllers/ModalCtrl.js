@@ -1,27 +1,15 @@
 (function() {
 
     function ModalCtrl($uibModalInstance, Room) {
-        var modal = this;
+        var Modal = {};
+
         //to grab the Room factory services in order to add to firebase
-        modal.room = Room.all;
+        this.room = Room.all;
+        //to close our modal window
+        this.close = function() {
+            $uibModalInstance.close();
 
-        //this will hold our new room variable
-        modal.newRoom = "";
-
-
-        modal.close = function() {
-            $uibModalInstance.close('Cancel');
         };
-
-
-        modal.submit = function() {
-            modal.add(modal.newRoom);
-            modal.close();
-        };
-
-
-
-
 
     }
 
@@ -29,7 +17,7 @@
 
     angular
         .module('blocChat')
-        .controller('ModalCtrl', ['Room', '$uibModalInstance', ModalCtrl]);
+        .controller('ModalCtrl', ['$uibModalInstance', 'Room', ModalCtrl]);
 
 
 })();
