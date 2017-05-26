@@ -2,22 +2,22 @@
 
     function ModalCtrl($uibModalInstance, Room) {
       // set the variable Modal to object this in order to retrieve functions
-        var Modal = {};
+      var modal = this;
 
         // create a room
-        Modal.createRoom = function() {
+        modal.createRoom = function() {
             Room.add(this.newRoom);
             $uibModalInstance.close();
         };
 
 
         //to close our modal window
-        Modal.close = function() {
+        modal.close = function() {
             $uibModalInstance.close();
 
         };
 
-        return Modal;
+      
 
     }
 
