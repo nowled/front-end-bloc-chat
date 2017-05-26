@@ -1,15 +1,23 @@
 (function() {
 
     function ModalCtrl($uibModalInstance, Room) {
+      // set the variable Modal to object this in order to retrieve functions
         var Modal = {};
 
-        //to grab the Room factory services in order to add to firebase
-        this.room = Room.all;
+        // create a room
+        Modal.createRoom = function() {
+            Room.add(this.newRoom);
+            $uibModalInstance.close();
+        };
+
+
         //to close our modal window
-        this.close = function() {
+        Modal.close = function() {
             $uibModalInstance.close();
 
         };
+
+        return Modal;
 
     }
 

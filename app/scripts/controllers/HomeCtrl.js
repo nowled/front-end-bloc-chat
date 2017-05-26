@@ -13,7 +13,7 @@
         }
 
         this.openModal = function(size) {
-            var modalInstance = $uibModal.open({
+               $uibModal.open({
                 templateUrl: '/templates/modal.html',
                 controller: 'ModalCtrl as modal',
                 size: size
