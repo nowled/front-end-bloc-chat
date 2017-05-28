@@ -3,16 +3,16 @@
 
         this.rooms = Room.all;
 
-        this.addRoom = function() {
-            var newRoomName = this.roomName;
+    /** No longer need this code as I will be adding a room with
+      a Modal and not this function  below
+    this.addRoom = function() {
+        var newRoomName = this.roomName;
+        Room.add({name: newRoomName });
+        this.roomName = '';
+    }
+**/
 
-            Room.add({
-                name: newRoomName
-            });
-            this.roomName = '';
-        }
-
-        this.openModal = function(size) {
+        this.addRoom = function(size) {
                $uibModal.open({
                 templateUrl: '/templates/modal.html',
                 controller: 'ModalCtrl as modal',
