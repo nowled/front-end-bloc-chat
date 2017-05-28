@@ -34,7 +34,7 @@ ul {
     list-style-type: none;
 }
 
-.main {
+ .messages {
     position: absolute;
     left: 470px;
     top: 120px;

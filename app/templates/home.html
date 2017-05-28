@@ -11,11 +11,16 @@
     <div ng-repeat="room in home.rooms">
         <ul>
             <li>
-                <h3>{{room.name}}</h3></li>
+                <p class="room-name" ng-click="home.setCurrentRoom(room)">{{ room.name }}</p></li>
         </ul>
 
     </div>
 </div>
-<div class="main">
-<p> To be Or Not To Be </p>
+<div class="messages">
+    <div class="messages-header">
+        <h3>{{ home.currentRoom.name }}</h3>
+    </div>
+    <div class="messages-body" ng-repeat="message in home.messages">
+      {{message.message}}
+    </div>
 </div>
