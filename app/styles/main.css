@@ -35,6 +35,8 @@ ul {
 }
 
  .messages {
+   font-family: 'Open Sans', sans-serif;
+   font-family: 'Gloria Hallelujah', cursive;
     position: absolute;
     left: 470px;
     top: 120px;
@@ -51,10 +53,16 @@ span {
 h2 {
     font-size: 5.2rem;
     font-weight: bolder;
+    text-align: center;
 }
 
 ul li {
     text-decoration: none;
+}
+[ng-click],
+[data-ng-click],
+[x-ng-click] {
+    cursor: pointer;
 }
 
 .modal {
@@ -116,4 +124,49 @@ ul li {
 .btn-bloc-color .badge {
     color: #A39D9D;
     background-color: #261B1B;
+}
+.btn-home {
+  color: #ffffff;
+  background-color: #1E1B21;
+  border-color: #E0DFE8;
+}
+
+.btn-home:hover,
+.btn-home:focus,
+.btn-home:active,
+.btn-home.active,
+.open .dropdown-toggle.btn-home {
+  color: #ffffff;
+  background-color: #8A837F;
+  border-color: #E0DFE8;
+}
+
+.btn-home:active,
+.btn-home.active,
+.open .dropdown-toggle.btn-home {
+  background-image: none;
+}
+
+.btn-home.disabled,
+.btn-home[disabled],
+fieldset[disabled] .btn-home,
+.btn-home.disabled:hover,
+.btn-home[disabled]:hover,
+fieldset[disabled] .btn-home:hover,
+.btn-home.disabled:focus,
+.btn-home[disabled]:focus,
+fieldset[disabled] .btn-home:focus,
+.btn-home.disabled:active,
+.btn-home[disabled]:active,
+fieldset[disabled] .btn-home:active,
+.btn-home.disabled.active,
+.btn-home[disabled].active,
+fieldset[disabled] .btn-home.active {
+  background-color: #1E1B21;
+  border-color: #E0DFE8;
+}
+
+.btn-home .badge {
+  color: #1E1B21;
+  background-color: #ffffff;
 }

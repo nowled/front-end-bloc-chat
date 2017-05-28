@@ -3,7 +3,8 @@
 
         this.rooms = Room.all;
         var home = this;
-        home.currentRoom = null;
+         
+
 
     /** No longer need this code as I will be adding a room with
       a Modal and not this function  below
