@@ -1,6 +1,6 @@
 (function() {
 
-    function ModalCtrl($uibModalInstance, Room) {
+    function ModalCtrl(Room,$uibModalInstance, $cookies) {
       // set the variable Modal to object this in order to retrieve functions
       var modal = this;
 
@@ -19,6 +19,11 @@
 
         };
 
+        modal.createUserName = function () {
+           $cookies.put('BlocChatCurrentUser', modal.userName);
+           $uibModalInstance.close();
+       }
+
 
 
     }
@@ -27,7 +32,7 @@
 
     angular
         .module('blocChat')
-        .controller('ModalCtrl', ['$uibModalInstance', 'Room', ModalCtrl]);
+        .controller('ModalCtrl', ['Room','$uibModalInstance','$cookies', ModalCtrl]);
 
 
 })();
