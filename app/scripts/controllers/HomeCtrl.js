@@ -1,9 +1,9 @@
 (function() {
-    function HomeCtrl(Room, Message, $uibModal) {
-
-        this.rooms = Room.all;
+    function HomeCtrl(Room, Message, $uibModal,$cookies) {
         var home = this;
-         
+         home.rooms = Room.all;
+      
+        home.currentUser = $cookies.get('BlocChatCurrentUser');
 
 
     /** No longer need this code as I will be adding a room with
@@ -28,10 +28,15 @@
                home.currentRoom = room;
                home.messages = Message.getByRoomId(home.currentRoom.$id);
            }
+        home.sendMessage = function () {
+          home.newMessage.roomId = home.currentRoom.$id;
+          home.newMessage.userName = home.currentUser;
+          Message.send(home.newMessage);
+      }
     }
 
 
     angular
         .module('blocChat')
-        .controller('HomeCtrl', ['Room', 'Message', '$uibModal', HomeCtrl]);
+        .controller('HomeCtrl', ['Room', 'Message', '$uibModal', '$cookies', HomeCtrl]);
 })();

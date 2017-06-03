@@ -16,8 +16,18 @@
 
     </div>
 </div>
-<div class="messages"  ng-repeat="message in home.messages">
-<h2> Message Board {{message.$id}}</h2>
- {{message.message}}
-   <div>{{ modal.userName }}</div>
+
+<div class="messages">
+<div class="messages-header">
+       <h3 class="chatroomheader">{{ home.currentRoom.name }}</h3>
+   </div>
+   <div class="messages-body" ng-repeat="message in home.messages">
+       <div class="username">{{ message.userName }}</div>
+       <div class="timestamp">{{ message.sentAt | date : "shortTime" }}</div>
+       <div class="user-message">{{ message.content }}</div>
+   </div>
+   <div class="message-field">
+       <input type="text" name="input" placeholder="Type your message here" class="message-box" ng-model="home.newMessage.content" style="width:500px;">
+       <button class="btn-home" type="button" ng-click="home.sendMessage()">Send message</button>
+   </div>
 </div>
