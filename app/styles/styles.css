@@ -1,22 +1,20 @@
 * {
     font-family: 'Open Sans', sans-serif;
 }
+html {
+    height: 100%;
+    font-size: 100%;
+}
 
 body {
-    /**  padding-left: 10px; */
-    box-sizing: border-box;
+    background-color: white;
 }
 
-.chatroomheader {
-  text-align: center;
-  font-weight: bolder;
-}
-
+/* Top header */
 .top {
     position: absolute;
     left: 0;
     right: 0;
-    top: 0;
     width: 100%;
     height: 92px;
     background-color: #DEDEDE;
@@ -24,30 +22,71 @@ body {
     text-align: center;
 }
 
-.left {
-    position: absolute;
-    left: 0;
+/*Sidebar*/
+
+.sidebar {
+    position: fixed;
     top: 92px;
-    bottom: 0;
+    left: 0px;
     width: 20%;
+    height: 100%;
     background-color: #DEDEDE;
     border-right: solid #d3d3d3 7px;
     padding-top: 7px;
-     box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 1;
 }
 
 ul {
     list-style-type: none;
 }
+.sidebar-header {
+    padding-left: 10px;
+    margin-bottom: 5px;
+    display: table;
+    width: 100%;
+    box-sizing: border-box;
+}
 
- .messages {
-   font-family: 'Open Sans', sans-serif;
-   font-family: 'Gloria Hallelujah', cursive;
-    position: absolute;
-    left: 470px;
-    top: 120px;
-    right: 0;
-    bottom: 0;
+.sidebar-header .new-room {
+    margin: 0 5px;
+}
+
+.sidebar-title {
+    display: inline-block;
+    padding-right: 15px;
+}
+
+.sidebar .room-name {
+    padding-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.sidebar .room-name:hover {
+    cursor: pointer;
+}
+
+/*Messages*/
+
+.messages {
+    position: fixed;
+    top: 0px;
+    left: 250px;
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    z-index: 1;
+    overflow: scroll;
+}
+
+
+.messages-body {
+    padding-right: 10px;
+}
+
+.messages-body .username {
+    font-weight: bold;
 }
 
 .messages-body .timestamp {
@@ -55,25 +94,25 @@ ul {
     padding-right: 100px;
 }
 
-.messages-body .username {
-    font-weight: bold;
-}
-.messages .userame .timestamp {
+.messages-body .username .timestamp {
     display: inline-block;
 }
 
- .messages .user-message {
-     padding-top: 5px;
-     padding-bottom: 5px;
+.messages-body .user-message {
+    padding-top: 5px;
+    padding-bottom: 5px;
     display: inline-block;
- }
+}
 
- .message-field {
-     bottom: 0;
-     padding-bottom: 5px;
-     position: fixed;
- }
+.message-field {
+    bottom: 0;
+    padding-bottom: 5px;
+    position: fixed;
+}
 
+.message-box {
+    width: 800px;
+}
 
 span {
     font-size: 4rem;

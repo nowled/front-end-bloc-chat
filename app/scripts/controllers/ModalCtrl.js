@@ -19,7 +19,7 @@
 
         };
 
-        modal.createUserName = function () {
+        modal.createUserName = function() {
            $cookies.put('BlocChatCurrentUser', modal.userName);
            $uibModalInstance.close();
        }
