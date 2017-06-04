@@ -1,9 +1,8 @@
 (function() {
-    function HomeCtrl(Room, Message, $uibModal,$cookies) {
+    function HomeCtrl(Room, Message, $uibModal, $cookies) {
         var home = this;
          home.rooms = Room.all;
-      
-        home.currentUser = $cookies.get('BlocChatCurrentUser');
+
 
 
     /** No longer need this code as I will be adding a room with
@@ -29,10 +28,13 @@
                home.messages = Message.getByRoomId(home.currentRoom.$id);
            }
         home.sendMessage = function () {
+
           home.newMessage.roomId = home.currentRoom.$id;
-          home.newMessage.userName = home.currentUser;
+          home.newMessage.userName  = $cookies.get('BlocChatCurrentUser');
           Message.send(home.newMessage);
+
       }
+
     }
 
 
