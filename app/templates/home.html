@@ -26,7 +26,7 @@
        <div class="timestamp">{{ message.sentAt | date : "shortTime" }}</div>
        <div class="user-message">{{ message.content }}</div>
    </div>
-   <div class="message-field">
+   <div class="message-field" ng-show="home.currentRoom.name">
        <input type="text" name="input" placeholder="Type your message here" class="message-box" ng-model="home.newMessage.content" style="width:500px;">
        <button class="btn-home" type="button" ng-click="home.sendMessage()">Send message</button>
    </div>
