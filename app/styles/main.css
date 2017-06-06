@@ -58,11 +58,9 @@ ul {
 .messages-body .username {
     font-weight: bold;
 }
-<<<<<<< HEAD
-.messages .username .timestamp {
-=======
+
 .messages .userame .timestamp {
->>>>>>> Checkpoint6
+
     display: inline-block;
 }
 
