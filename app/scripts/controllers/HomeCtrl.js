@@ -1,8 +1,14 @@
 (function() {
+<<<<<<< HEAD
     function HomeCtrl(Room, Message, $uibModal, $cookies) {
         var home = this;
          home.rooms = Room.all;
 
+=======
+    function HomeCtrl(Room, Message, $uibModal,$cookies) {
+        var home = this;
+         home.rooms = Room.all;
+>>>>>>> Checkpoint6
 
 
     /** No longer need this code as I will be adding a room with
@@ -28,6 +34,7 @@
                home.messages = Message.getByRoomId(home.currentRoom.$id);
            }
         home.sendMessage = function () {
+<<<<<<< HEAD
 
           home.newMessage.roomId = home.currentRoom.$id;
           home.newMessage.userName  = $cookies.get('BlocChatCurrentUser');
@@ -35,6 +42,12 @@
 
       }
 
+=======
+          home.newMessage.roomId = home.currentRoom.$id;
+          home.newMessage.userName = $cookies.get('BlocChatCurrentUser');
+          Message.send(home.newMessage);
+      }
+>>>>>>> Checkpoint6
     }
 
 
